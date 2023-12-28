@@ -1,0 +1,371 @@
+/*
+  Специально для светлой темы при наличии класса.
+  Здесь окажутся стили, которые нужно переопределить принудительно,
+  переключая тему
+*/
+:root {
+    --font-family: IBM Plex Mono;
+    --font-size: 18px;
+    --font-size-big: 157px;
+    --font-weight: 400;
+    --font-weight-bold: 700;
+    --color-background-light-theme:#FFF1F7;
+    --color-letter-decor-light-theme:#353430;
+    --color-header-light-theme:#FFC2E6;
+    --color-shadow-decor-light-theme:#FF8DCB;
+  }
+  
+  
+  @media (prefers-color-scheme: light) {
+    :root {
+          /* Дублируем переменные светлой темы */    
+         --font-family: IBM Plex Mono;
+        --font-size: 18px;
+        --font-size-big: 157px;
+        --font-weight: 400;
+        --font-weight-bold: 700;
+        --color-background-light-theme:#FFF1F7;
+        --color-letter-decor-light-theme:#353430;
+        --color-header-light-theme:#FFC2E6;
+        --color-shadow-decor-light-theme:#FF8DCB;
+      }
+  }
+  
+  .page.theme_light {
+    /* сохраните этот селектор в приведённом виде.
+      Так стили написанные ниже будут иметь больший вес,
+      чем стили в медиазапросе предпочтений пользователя
+    */
+    header {
+        display: grid;
+        height: 100dvh;
+        background-image: url(../images/cover-image-light.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        padding: 20px;
+      }
+      
+      main {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        background-color: var(--color-background-light-theme);
+        padding-top: 60px;
+        gap: 80px;
+      }
+      
+      button {
+        background-color: transparent;
+        color: var(--color-letter-decor-light-theme);
+        padding: 0px 13px;
+        border: none;
+      }
+      
+      .header__theme-menu-button_type_light {
+        border: 1px solid var(--color-letter-decor-light-theme);
+      }
+      
+      .header__theme-menu-button_type_dark:hover {
+        border: 1px solid var(--color-letter-decor-light-theme);
+      }
+      
+      a {
+        text-decoration: none;
+        filter: drop-shadow(2px 2px var( --color-shadow-decor-light-theme));
+      }
+      
+      .page {
+    
+      }
+      
+      .header__theme-menu {
+        display: grid;
+        grid-template-columns: 1.6fr 1fr;
+        justify-items: end;
+      }
+      
+      .header__theme-menu-button {
+        text-transform: lowercase;
+      }
+      
+      .header__theme-menu-list {
+        display: flex;
+        justify-content: end;
+        gap: 10px;
+      }
+      
+      .bulb {
+        flex-direction: row;
+        display: flex;
+        align-items: flex-start;
+        gap: 3px;
+        color: var(--color-letter-decor-light-theme);
+        text-transform: uppercase;
+        font-family: var(--font-family);
+        font-weight: var(--font-weight);
+      }
+      
+      .circle {
+        display: flex;
+        align-items: center;
+        padding: 3px;
+        border-top: 1.5px solid var(--color-letter-decor-light-theme);
+        border-right: 1.5px solid var(--color-letter-decor-light-theme);
+      }
+      
+      .circle::after {
+        content: "";
+        width: 9px;
+        height: 9px;
+        margin: 5px;
+        border-radius: 50%;
+        background-color: var(--color-letter-decor-light-theme); 
+        border: 2px solid var(--color-letter-decor-light-theme); 
+        box-shadow: 0px 0px 4px 2px var(--color-letter-decor-light-theme);
+      }
+      
+      .title {
+        display: grid;
+      }
+      
+      .title__inscription {
+        display: flex;
+        align-items: center;
+        margin-left: -22px;
+        font-family: var(--font-family);
+        font-weight: var(--font-weight-bold);
+        color: var(--color-header-light-theme);
+        font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+        filter: drop-shadow(4px 4px var(--color-shadow-decor-light-theme));
+      }
+      
+      .container__under-inscription {
+        display: flex;
+        justify-content: flex-end;
+      }
+      
+      .text__under-inscription {
+        position: relative;
+        align-self: end;
+        bottom: 23px;
+        right: 4px;
+        background-color: var( --color-shadow-decor-light-theme);
+        font-family: var(--font-family);
+        font-weight: var(--font-weight-bold);
+        line-height: 23.4px;
+        color: var(--color-letter-decor-light-theme);
+      }
+      
+      .rectangle {
+        border-bottom: 1.5px solid var(--color-letter-decor-light-theme);
+        border-left: 1.5px solid var(--color-letter-decor-light-theme);
+        width: 25px;
+        height: 25px;
+      }
+      
+      .rectangle_bottom {
+        display: flex;
+        align-items: flex-end;
+      }
+      
+      .style_sections {
+        display: grid;
+        gap: 20px;
+        width: 100%;
+        padding: 0px 10px;
+      }
+      
+      .grid_container {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: 0.5fr 1fr;
+      }
+      
+      .section_title {
+        font-family: var(--font-family);
+        font-weight: var(--font-weight-bold);
+        font-size: var(--font-size);
+        color: var(--color-letter-decor-light-theme);
+        line-height: 23.4px;
+      }
+      
+      .text_title {
+        font-family: var(--font-family);
+        font-weight: var(--font-weight-bold);
+        color: var(--color-letter-decor-light-theme);
+        background-color: var(--color-shadow-decor-light-theme);
+        font-size: var(--font-size);
+        line-height: 23.4px;
+      }
+      
+      .text {
+        font-family: var(--font-family);
+        font-weight: var(--font-weight);
+        color: var(--color-letter-decor-light-theme);
+        font-size: var(--font-size);
+        line-height: 23.4px;
+      }
+      
+      .grid_cards {
+        display: grid;
+        grid-template-rows: auto;
+        gap: 20px;
+      }
+      
+      .columns {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: start;
+        gap: 20px;
+      }
+      
+      .style_text-title {
+        display: grid;
+        gap: 20px;
+      }
+      
+      .inscription {
+        display: grid;
+        gap: 10px;
+      }
+      
+      .pictures {
+        display: grid;
+        height: 100dvh;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas: 
+        "sunset sunset ice"
+        "tape books ice"
+        "tape street street";
+        gap: 20px;
+      }
+      
+      .background_sunset {
+        background-image: url(../images/sunset.png);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        object-fit: contain;
+        grid-area: sunset;
+    }
+    
+    .background_ice {
+        background-image: url(../images/ice-cream.png);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        object-fit: contain;
+        grid-area: ice;
+    }
+    
+    .background_tape {
+        background-image: url(../images/tape.png);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        object-fit: contain;
+        grid-area: tape;
+    }
+    
+    .background_books {
+        background-image: url(../images/books.png);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        object-fit: contain;
+        grid-area: books;
+    }
+    
+    .background_street {
+        background-image: url(..//images/street.png);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        object-fit: contain;
+        grid-area: street;
+    }
+      
+      .footer {
+        height: 100dvh;
+        background-color: var(--color-background-light-theme);
+        padding-top: 60px;
+      }
+      
+      .footer_text {
+        font-size: var(--font-size-big);
+        font-family: var(--font-family);
+        font-weight: var(--font-weight-bold);
+        color: var(--color-header-light-theme);
+        filter: drop-shadow(2px 2px var(--color-shadow-decor-light-theme));
+        align-self: center;
+        grid-row: 2/-2;
+      }
+      
+      .align_content {
+        padding: 20px;
+        height: 100%;
+        display: grid;
+        grid-template-rows: repeat(4, auto);
+        justify-items: center;
+      }
+      
+      .container_rectangle-reverse {
+        display: flex;
+        width: 100%;
+        justify-content: flex-end;
+      }
+      
+      .rectangle_reverse {
+        border-top: 1.5px solid var(--color-letter-decor-light-theme);
+        border-right: 1.5px solid var(--color-letter-decor-light-theme);
+        width: 25px;
+        height: 25px;
+      }
+      
+      .container_rectangle {
+        display: flex;
+        align-items: flex-end;
+        width: 100%;
+      }
+    
+      @media only screen and (max-width: 375px) {
+    
+        header {
+          pad: 10px;
+        }
+    
+        .grid_container {
+          display: flex;
+          gap: 10px;
+          flex-direction: column;
+        }
+    
+        .columns {
+          display: flex;
+          gap: 20px;
+          flex-direction: column;
+        }
+    
+        .footer_text {
+          font-size: var(--font-size-adaptive);
+        }
+    
+      }
+    
+    
+      @media only screen and (max-width: 768px) {
+        .grid_container {
+          display: flex;
+          gap: 10px;
+          flex-direction: column;
+        }
+    
+        .columns {
+          display: flex;
+          gap: 20px;
+          flex-direction: column;
+        }
+      }
+  }
