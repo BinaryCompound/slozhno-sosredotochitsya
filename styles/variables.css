@@ -9,4 +9,8 @@
   --font-size-big: 157px;
   --font-weight: 400;
   --font-weight-bold: 700;
+  --color-background-dark-theme:#000028;
+  --color-letter-dark-theme:#F1B2CE;
+  --color-header-dark-theme:#DB00FF;
+  --color-shadow-decor-dark-theme:#FF0070;
 }
