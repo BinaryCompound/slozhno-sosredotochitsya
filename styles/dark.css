@@ -320,7 +320,12 @@
       padding: 10px;
     }
 
-    .header__theme-menu-list {
+    main {
+      padding: 40px 10px;
+      gap: 50px;
+    }
+
+  .header__theme-menu-list {
       display: flex;
       gap: 13px;
       flex-direction: column;
@@ -335,41 +340,94 @@
       justify-content: flex-end;
   }
 
+  .style_sections {
+    gap: 10px;
+    padding: 0;
+   }
+
   .title__inscription {
     line-height: 95.7px;
     margin: 0;
   }
   
-    .grid_container {
-      display: flex;
+  .grid_container {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+  }
+  
+  .columns {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    }
+
+    .pictures {
+      height: 100%;
       gap: 10px;
-      flex-direction: column;
-    }
+      grid-template-areas: 
+      "sunset sunset sunset"
+      "ice ice ice"
+      "tape tape tape"
+      "books books books"
+      "street street street";
+   }
+
+   .background_sunset {
+    height: 142px;
+    width: 100%;
+  }
+
+   .background_ice {
+    height: 355px;
+    width: 100%;
+   }
+
+   .background_tape {
+    height: 237px;
+    width: 100%;
+   }
+
+   .background_books {
+    height: 355px;
+    width: 100%;
+   }
+
+   .background_street {
+    height: 237px;
+    width: 100%;
+   }
+
+   .footer {
+    padding: 0;
+   }
   
-    .columns {
-      display: flex;
-      gap: 20px;
-      flex-direction: column;
+  .footer_text {
+     font-size: var(--font-size-adaptive);
     }
-  
-    .footer_text {
-      font-size: var(--font-size-adaptive);
+
+    .align_content {
+      padding: 10px;
     }
   
   }
   
   
   @media only screen and (max-width: 768px) {
+
     .grid_container {
       display: flex;
       gap: 10px;
       flex-direction: column;
     }
-  
+
     .columns {
       display: flex;
       gap: 20px;
       flex-direction: column;
+    }
+    .footer_text {
+      font-size: 120px;
     }
   }
 }

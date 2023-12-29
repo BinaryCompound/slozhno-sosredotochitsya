@@ -339,6 +339,11 @@
           padding: 10px;
         }
 
+        main {
+          padding: 40px 10px;
+          gap: 50px;
+        }
+
         .header__theme-menu-list {
             display: flex;
             gap: 13px;
@@ -353,6 +358,11 @@
             gap: 37px;
             justify-content: flex-end;
         }
+
+        .style_sections {
+          gap: 10px;
+          padding: 0;
+         }
 
         .title__inscription {
             line-height: 95.7px;
@@ -370,15 +380,73 @@
           gap: 20px;
           flex-direction: column;
         }
+
+        .pictures {
+          height: 100%;
+          gap: 10px;
+          grid-template-areas: 
+          "sunset sunset sunset"
+          "ice ice ice"
+          "tape tape tape"
+          "books books books"
+          "street street street";
+       }
+
+       .background_sunset {
+        height: 142px;
+        width: 100%;
+      }
+
+       .background_ice {
+        height: 355px;
+        width: 100%;
+       }
+
+       .background_tape {
+        height: 237px;
+        width: 100%;
+       }
+    
+       .background_books {
+        height: 355px;
+        width: 100%;
+       }
+    
+       .background_street {
+        height: 237px;
+        width: 100%;
+       }
+
+       .footer {
+        padding: 0;
+       }
     
         .footer_text {
           font-size: var(--font-size-adaptive);
         }
+
+        .align_content {
+          padding: 10px;
+        }    
     
       }
     
     
       @media only screen and (max-width: 768px) {
 
+        .grid_container {
+          display: flex;
+          gap: 10px;
+          flex-direction: column;
+        }
+    
+        .columns {
+          display: flex;
+          gap: 20px;
+          flex-direction: column;
+        }
+        .footer_text {
+          font-size: 120px;
+        }
       }
   }

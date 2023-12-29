@@ -297,6 +297,7 @@ header {
 
     main {
       padding: 40px 10px;
+      gap: 50px;
     }
 
     .header__theme-menu-list {
@@ -312,6 +313,11 @@ header {
       align-items: flex-end;
       gap: 37px;
       justify-content: flex-end;
+   }
+
+   .style_sections {
+    gap: 10px;
+    padding: 0;
    }
 
     .title__inscription {
@@ -332,6 +338,8 @@ header {
   }
 
     .pictures {
+      height: 100%;
+     gap: 10px;
      grid-template-areas: 
      "sunset sunset sunset"
      "ice ice ice"
@@ -339,6 +347,35 @@ header {
      "books books books"
      "street street street";
   }
+
+  .background_sunset {
+    height: 142px;
+    width: 100%;
+  }
+
+  .background_ice {
+    height: 355px;
+    width: 100%;
+   }
+
+   .background_tape {
+    height: 237px;
+    width: 100%;
+   }
+
+   .background_books {
+    height: 355px;
+    width: 100%;
+   }
+
+   .background_street {
+    height: 237px;
+    width: 100%;
+   }
+
+   .footer {
+    padding: 0;
+   }
 
    .footer_text {
     font-size: var(--font-size-adaptive);
@@ -362,5 +399,9 @@ header {
       display: flex;
       gap: 20px;
       flex-direction: column;
+    }
+
+    .footer_text {
+      font-size: 120px;
     }
   }
