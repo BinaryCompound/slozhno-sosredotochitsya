@@ -61,6 +61,11 @@
         padding: 0px 13px;
         border: none;
       }
+
+      button:focus {
+        outline: none;
+        border-bottom: 1px solid #353430;
+      }
       
       .header__theme-menu-button_type_light {
         border: 1px solid var(--color-letter-decor-light-theme);
@@ -72,9 +77,18 @@
       
       a {
         text-decoration: none;
-        filter: drop-shadow(2px 2px var( --color-shadow-decor-light-theme));
+        text-shadow: 2px 2px 0 var(--color-shadow-decor-light-theme);
       }
       
+      a:hover {
+        border-block-end: 1px solid #353430;
+      }
+
+      a:focus {
+        outline: none;
+        border: 1px solid var(--color-letter-decor-light-theme);
+      }
+
       .page {
     
       }

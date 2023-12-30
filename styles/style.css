@@ -24,6 +24,12 @@ header {
     border: none;
   }
   
+  button:focus {
+    outline: none;
+    border-bottom: 1px solid #FF0070;
+  }
+  
+  
   .header__theme-menu-button_type_dark {
     border: 1px solid var(--color-shadow-decor-dark-theme);
   }
@@ -34,9 +40,18 @@ header {
   
   a {
     text-decoration: none;
-    filter: drop-shadow(2px 2px var(--color-shadow-decor-dark-theme));
+    text-shadow: 2px 2px 0 var(--color-shadow-decor-dark-theme);
   }
   
+  a:hover {
+    border-block-end: 1px solid #FF0070;
+  }
+
+  a:focus {
+    outline: none;
+    border: 1px solid var(--color-shadow-decor-dark-theme);
+  }
+
   .page {
 
   }
