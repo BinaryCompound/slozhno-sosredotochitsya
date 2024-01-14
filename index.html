@@ -12,42 +12,46 @@
   <link rel="stylesheet" href="./styles/style.css">
   <link rel="stylesheet" href="./styles/dark.css">
   <link rel="stylesheet" href="./styles/light.css">
-  <link rel="icon" href="./images/favicon.ico">
+  <link rel="icon" href="./images/favicon.ico" sizes="any">
+  <link rel="icon" href="./images/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="./images/favicon.png">
   <title>Сложно сосредоточиться</title>
 </head>
 
 <body class="page">
   <header class="header decorated-zone">
-    <nav class="header__theme-menu">
-      <ul class="header__theme-menu-list">
-        <li class="header__theme-menu-item">
-          <button class="header__theme-menu-button header__theme-menu-button_type_light">
-            День
-          </button>
-        </li>
-        <li class="header__theme-menu-item">
-          <button class="header__theme-menu-button header__theme-menu-button_active header__theme-menu-button_type_auto"
-            disabled>
-            Авто
-          </button>
-        </li>
-        <li class="header__theme-menu-item">
-          <button class="header__theme-menu-button header__theme-menu-button_type_dark">
-            Неон
-          </button>
-        </li>
-      </ul>
+    <div class="header__theme-menu">
+      <nav>
+        <ul class="header__theme-menu-list">
+          <li class="header__theme-menu-item">
+            <button class="header__theme-menu-button header__theme-menu-button_type_light">
+              День
+            </button>
+          </li>
+          <li class="header__theme-menu-item">
+            <button class="header__theme-menu-button header__theme-menu-button_active header__theme-menu-button_type_auto"
+              disabled>
+              Авто
+            </button>
+          </li>
+          <li class="header__theme-menu-item">
+            <button class="header__theme-menu-button header__theme-menu-button_type_dark">
+              Неон
+            </button>
+          </li>
+        </ul>
+      </nav>
       <div class="bulb">
         <p class="text_hide">Rec</p>
         <div class="circle"></div>
       </div>
-    </nav>
+    </div>
     <div class="title">
       <h1 class="title__inscription">no focus</h1>
       <div class="container__under-inscription">
         <p class="text__under-inscription">
-          Что делать, когда не можешь делать ничего<br>
-          Или почему нам так сложно сконцентрироваться,<br>особенно когда очень надо
+          Что делать, когда не можешь делать ничего
+          Или почему нам так сложно сконцентрироваться, особенно когда очень надо
         </p>
       </div>
       <div class="rectangle_bottom">
@@ -58,7 +62,7 @@
   <main>
     <section class="style_sections">
       <div class="grid_container">
-        <h2 class="section_title">Почему сосредоточиться так <br> сложно</h2>
+        <h2 class="section_title">Почему сосредоточиться так сложно</h2>
         <div class="style_text-title">
           <div class="inscription">
             <h2 class="text_title">Многозадачность</h2>
@@ -66,7 +70,7 @@
               многозадачность,
               когда она так нужна вам (и всем нанимающим менеджерам этого мира)? А дело в том, что её просто не
               существует.
-              Исследователи <a href="https://dana.org/article/multicosts-of-multitasking/">выяснили</a>, что мозгу
+              Исследователи <a target="_blank" href="https://dana.org/article/multicosts-of-multitasking/">выяснили</a>, что мозгу
               тяжело
               концентрироваться даже на двух делах одновременно. А когда в поле
               внимания попадает несколько важных задач, организм паникует и выделяет кортизол и адреналин — «гормоны
@@ -85,12 +89,13 @@
               отвлекаешься, тем больше удовольствия получаешь.</p>
           </div>
         </div>
+      </div>
     </section>
     <section class="style_sections">
-      <h2 class="section_title">Что снижает концентрацию <br> внимания?</h2>
-      <div class="columns">
+      <h2 class="section_title" id="compression">Что снижает концентрацию внимания?</h2>
+      <div class="adviсe">
         <div class="inscription">
-          <h2 class="text_title">Многозадачность</h2>
+          <h3 class="text_title">Многозадачность</h3>
           <p class="text">
             Как концентрация может снижаться из-за… концентрации? Любая стрессовая ситуация (и резко меняющийся мир в
             целом) заставляет наш мозг постоянно «сканировать» окружающую среду на предмет опасности. Например, читать
@@ -121,11 +126,11 @@
     </section>
     <section class="style_sections">
       <div class="grid_container">
-        <h2 class="section_title">Как концентрироваться лучше, чем золотая рыбка (то есть дольше трёх секунд)</h2>
+        <h3 class="section_title">Как концентрироваться лучше, чем золотая рыбка (то есть дольше трёх секунд)</h3>
         <div class="style_text-title">
             <h2 class="text_title">5 простых (на самом деле не очень) советов</h2>
           <div class="inscription">
-            <h2 class="text_title">Представьте небо и облака</h2>
+            <h4 class="text_title">Представьте небо и облака</h4>
             <p class="text">
               Или листья в ручье. Тут дело в лёгкой медитации, которая помогает успокоиться. Ведь часто именно
               тревожные мысли о сложных задачах как раз и мешают эти сложные задачи делать. В такие моменты можно
@@ -145,7 +150,7 @@
           <div class="inscription">
             <h2 class="text_title">Прогуляйтесь</h2>
             <p class="text">
-              Или даже пробегитесь. Лучше найти парк или лес: один эксперимент <a
+              Или даже пробегитесь. Лучше найти парк или лес: один эксперимент <a target="_blank"
                 href="https://www.sciencedirect.com/science/article/abs/pii/S0272494415000328">показал</a>, что
               созерцание природы
               повышает концентрацию, в то время как после просмотра городских пейзажей она наоборот понижается. Можно
@@ -175,11 +180,21 @@
     <section class="style_sections">
       <h2 class="text_title">А можно в картинках?</h2>
       <div class="pictures">
-        <div class="background_sunset"></div>
-        <div class="background_ice"></div>
-        <div class="background_tape"></div>
-        <div class="background_books"></div>
-        <div class="background_street"></div>
+        <div class="background_sunset">
+          <img src="./images/sunset.png" alt="Море с закатом на горизонте" height="260px" width="649px" >
+        </div>
+        <div class="background_ice">
+          <img src="./images/ice-cream.png" alt="Мороженное" height="595px" width="315px" >
+        </div>
+        <div class="background_tape">
+          <img src="./images/tape.png" alt="музыкальная кассета" height="768px" width="315px" >
+        </div>
+        <div class="background_books">
+          <img src="./images/books.png" alt="Книги" height="315px" width="315px" >
+        </div>
+        <div  class="background_street">
+          <img src="./images/street.png" alt="Улица" height="428px" width="649px">
+        </div>
       </div>
     </section>
   </main>
@@ -188,7 +203,9 @@
       <div class="container_rectangle-reverse">
         <div class="rectangle_reverse"></div>
       </div>
-      <h1 class="footer_text">focus</h1>
+      <div class="text_container">
+        <h1 class="footer_text">focus</h1>
+      </div>
       <div class="container_rectangle">
         <div class="rectangle"></div>
       </div>

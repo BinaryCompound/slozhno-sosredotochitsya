@@ -4,14 +4,17 @@
 */
 
 :root {
+  --image: url(../images/cover-image-dark.png);
   --font-family: IBM Plex Mono;
   --font-size: 18px;
-  --font-size-big: 157px;
+  --font-size-big: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   --font-size-adaptive: 116px;
   --font-weight: 400;
   --font-weight-bold: 700;
-  --color-background-dark-theme:#000028;
-  --color-letter-dark-theme:#F1B2CE;
-  --color-header-dark-theme:#DB00FF;
-  --color-shadow-decor-dark-theme:#FF0070;
+  --color-background-theme:#000028;
+  --color-background-text: #FF0070;
+  --color-letter-theme:#F1B2CE;
+  --color-header-theme:#DB00FF;
+  --color-header-text-sections:#FF0070;
+  --color-shadow-decor-theme:#FF0070;
 }
