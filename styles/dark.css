@@ -12,8 +12,8 @@
   --image: url(../images/cover-image-dark.png);
   --font-family: IBM Plex Mono;
   --font-size: 18px;
-  --font-size-big: 157px;
-  --font-size-adaptive: 116px;
+  --font-size-big: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  --font-size-adaptive: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   --font-weight: 400;
   --font-weight-bold: 700;
   --color-background-theme:#000028;
@@ -27,7 +27,7 @@
       --font-family: IBM Plex Mono;
       --font-size: 18px;
       --font-size-big: 157px;
-      --font-size-adaptive: 116px;
+      --font-size-adaptive: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
       --font-weight: 400;
       --font-weight-bold: 700;
       --color-background-theme:#000028;
