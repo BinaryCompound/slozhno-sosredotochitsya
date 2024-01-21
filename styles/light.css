@@ -12,12 +12,14 @@
   --font-size-adaptive: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   --font-weight: 400;
   --font-weight-bold: 700;
+  --color-letter-title:#353430;
   --color-background-theme:#FFF1F7;
   --color-background-text: #FF8DCB;
   --color-letter-theme:#353430;
   --color-header-theme:#FFC2E6;
   --color-header-text-sections:#353430;
   --color-shadow-decor-theme:#FF0070;
+  --color-decoration:#353430;
 
   .text_hide, .circle::after {
     display: none;
@@ -41,6 +43,10 @@
 
   .header__theme-menu-button_type_dark:hover {
     border: 1px solid #32312D66
+  }
+  
+  .rec-decoration {
+    display: none;
   }
 
   button:focus {

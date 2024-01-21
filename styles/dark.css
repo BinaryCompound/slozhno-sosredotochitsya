@@ -16,10 +16,12 @@
   --font-size-adaptive: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   --font-weight: 400;
   --font-weight-bold: 700;
+  --color-letter-title:#000028;
   --color-background-theme:#000028;
   --color-letter-theme:#F1B2CE;
   --color-header-theme:#DB00FF;
   --color-shadow-decor-theme:#FF0070;
+  --color-decoration:#FF0070;
 
   @media (prefers-color-scheme: dark) {
     :root {
