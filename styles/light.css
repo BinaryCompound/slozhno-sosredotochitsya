@@ -20,62 +20,31 @@
   --color-header-text-sections:#353430;
   --color-shadow-decor-theme:#FF0070;
   --color-decoration:#353430;
-
-  .text_hide, .circle::after {
-    display: none;
-  }
-
-  .page {
-    background-image: var(--image);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-color: var(--color-background-theme);
- }
-
-  .header__theme-menu-button_type_light {
-    border: 1px solid var( --color-header-text-sections);
-  }
+  --color-button-nav:#32312D66;
   
-  .header__theme-menu-button_type_dark {
-    border: none;
-  }
+  --rec-visibility: hidden;
+}
 
-  .header__theme-menu-button_type_dark:hover {
-    border: 1px solid #32312D66
-  }
-  
-  .rec-decoration {
-    display: none;
-  }
+@media (prefers-color-scheme: light) {
+  :root {
+        /* Дублируем переменные светлой темы */    
+        --font-family: IBM Plex Mono,  monospace;
+        --image: url(../images/cover-image-light.png);
+        --font-size: 18px;
+        --font-size-big: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+        --font-size-adaptive: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+        --font-weight: 400;
+        --font-weight-bold: 700;
+        --color-letter-title:#353430;
+        --color-background-theme:#FFF1F7;
+        --color-background-text: #FF8DCB;
+        --color-letter-theme:#353430;
+        --color-header-theme:#FFC2E6;
+        --color-header-text-sections:#353430;
+        --color-shadow-decor-theme:#FF0070;
+        --color-decoration:#353430;
+        --color-button-nav:#32312D66;
 
-  button:focus {
-    outline: none;
-    border-bottom: 1px solid #353430;
-  }
-
-  a:hover {
-    border-block-end: 1px solid #353430;
-  }
-
-  .bulb {
-    left: 480px;
-  }
-    
-    @media (prefers-color-scheme: light) {
-      :root {
-            /* Дублируем переменные светлой темы */    
-            --font-family: IBM Plex Mono;
-            --font-size: 18px;
-            --font-size-big: 157px;
-            --font-size-adaptive: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-            --font-weight: 400;
-            --font-weight-bold: 700;
-            --color-background-theme:#FFF1F7;
-            --color-letter-theme:#353430;
-            --color-header-theme:#FFC2E6;
-            --color-shadow-decor-theme:#FF8DCB;
-        }
+        --rec-visibility: hidden;
     }
-    
-  }
+}

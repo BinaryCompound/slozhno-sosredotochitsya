@@ -10,7 +10,7 @@
     чем стили в медиазапросе предпочтений пользователя
   */
   --image: url(../images/cover-image-dark.png);
-  --font-family: IBM Plex Mono;
+  --font-family: IBM Plex Mono,  monospace;
   --font-size: 18px;
   --font-size-big: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   --font-size-adaptive: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
@@ -18,25 +18,13 @@
   --font-weight-bold: 700;
   --color-letter-title:#000028;
   --color-background-theme:#000028;
+  --color-background-text:#FF0070;
   --color-letter-theme:#F1B2CE;
   --color-header-theme:#DB00FF;
   --color-shadow-decor-theme:#FF0070;
   --color-decoration:#FF0070;
+  --color-button-nav:#FF007066;
 
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --image: './images/cover-image-dark.png';
-      --font-family: IBM Plex Mono;
-      --font-size: 18px;
-      --font-size-big: 157px;
-      --font-size-adaptive: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-      --font-weight: 400;
-      --font-weight-bold: 700;
-      --color-background-theme:#000028;
-      --color-letter-theme:#F1B2CE;
-      --color-header-theme:#DB00FF;
-      --color-shadow-decor-theme:#FF0070;
-    }
-  }
+  --rec-visibility: visible;
 }
 

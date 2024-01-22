@@ -9,8 +9,8 @@
 
 header {
   display: grid;
-  height: 100vh;
-  padding: 20px;
+  min-height: 100vh;
+  padding: 20px 20px 20px 0px;
 }
 
 main {
@@ -24,15 +24,19 @@ main {
 
 button {
   background-color: transparent;
+  color: var(--color-decoration);
   text-transform: lowercase;
-  color: var(--color-header-text-sections);
   padding: 0px 13px;
   border: none;
 }
 
+button:hover {
+  border: 1px solid var(--color-decoration);
+}
+
 button:focus {
   outline: none;
-  border-bottom: 1px solid #FF0070;
+  border-bottom: 1px solid var(--color-decoration);
 }
 
 img {
@@ -66,11 +70,11 @@ img {
   inset-block-end: 20px;
 }
 
-
 .rec-decoration {
   position: absolute;
   z-index: -1;
   display: inline-flex;
+  visibility: var(--rec-visibility);
   align-items: center;
   gap: 10px;
   inset-inline-end: 28px;
@@ -78,31 +82,26 @@ img {
 }
 
 .rec-decoration::before {
-  content: "REC";
-  color: var(--color-shadow-decor-theme, #ff0070);
+  content: "rec";
+  text-transform: uppercase;
+  color: var(--color-decoration);
   line-height: 24px;
+  display: var(--rec-visibility);
 }
 
 .rec-decoration::after {
   content: "";
   display: inline-block;
   border-radius: 50%;
-  box-shadow: 0 0 2px 2px var(--color-shadow-decor-theme, #ff0070);
-  background: var(--color-shadow-decor-theme, #ff0070);
+  box-shadow: 0 0 2px 2px var(--color-decoration);
+  background: var(--color-decoration);
   inline-size: 9px;
   block-size: 9px;
 }
 
 .header__theme-menu-button_active {
+  border: 1px solid var(--color-decoration);
   pointer-events: none;
-}
-
-.header__theme-menu-button_type_dark {
-  border: 1px solid var(--color-shadow-decor-theme);
-}
-
-.header__theme-menu-button_type_light:hover {
-  border: 1px solid #FF007066;
 }
 
 a {
@@ -111,16 +110,17 @@ a {
 }
 
 a:hover {
-  border-block-end: 1px solid #FF0070;
+  border-block-end: 1px solid var(--color-decoration);
 }
 
 a:focus {
   outline: none;
-  border: 1px solid var(--color-header-text-sections);
+  border: 1px solid var(--color-letter-theme);
 }
-
+ 
 .header__theme-menu {
   display: flex;
+  padding-left: 20px;
   justify-content: center;
   margin-bottom: 185px;
 }
@@ -140,7 +140,6 @@ a:focus {
 }
 
 .title__inscription {
-  margin-left: -22px;
   font-weight: var(--font-weight-bold);
   color: var(--color-header-theme);
   font-size: var(--font-size-big);
@@ -151,7 +150,8 @@ a:focus {
   justify-self: end;
   align-self: center;
   margin: 0px 0px 86px;
-  inline-size: 491px;
+  max-width: 491px;
+  width: 100%;
   background-color: var(--color-background-text);
   font-weight: var(--font-weight-bold);
   line-height: 23.4px;
@@ -174,7 +174,7 @@ a:focus {
 .section_title {
   font-weight: var(--font-weight-bold);
   font-size: var(--font-size);
-  color: var(--color-header-text-sections);
+  color: var(--color-decoration);
   line-height: 23.4px;
 }
 
@@ -183,7 +183,7 @@ a:focus {
 }
 
 .text_title {
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight);
   color: var(--color-letter-title);
   background-color: var(--color-background-text);
   font-size: var(--font-size);
@@ -220,6 +220,14 @@ a:focus {
   gap: 10px;
 }
 
+.picture_title {
+  font-weight: var(--font-weight-bold);
+  color: var(--color-letter-title);
+  background-color: var(--color-background-text);
+  font-size: var(--font-size);
+  line-height: 23.4px;
+}
+
 .pictures {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -233,6 +241,16 @@ a:focus {
 
 .compression_pictures {
   gap: 20px;
+}
+
+.background_sunset,
+.background_ice,
+.background_tape,
+.background_street {
+  width: 100%;
+  overflow: hidden;
+  object-fit: cover;
+  object-position: center center;
 }
 
 .background_sunset {
@@ -263,7 +281,7 @@ a:focus {
 .footer {
   display: grid;
   place-content: center;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .text_container {
@@ -335,8 +353,8 @@ a:focus {
   }
 
   .text__under-inscription {
-    inline-size: 346px;
-    width: auto;
+    max-width: 355px;
+    width: 100%;
     align-self: start;
     margin: 0;
   }
@@ -380,7 +398,6 @@ a:focus {
 @media screen and (min-width: 380px) and (max-width: 768px) {
 
   header {
-    padding: 20px;
     grid-template-rows: 1fr 0.5fr 1fr;
   }
 
@@ -403,9 +420,19 @@ a:focus {
   }
 
   .header__theme-menu {
-    display: flex;
+    display: grid;
+    grid-template-columns:  1fr min-content 1fr;
+    align-items: center;
     justify-content: flex-end;
-    margin-bottom: 125px;
+    margin-top: 45px;
+    margin-bottom: 0px;
+  }
+
+  .header__theme-menu-list {
+    display: flex;
+    grid-column: 4;
+    flex-direction: column;
+    gap: 13px;
   }
 
   .header__theme-menu-list {
