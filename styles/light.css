@@ -1,9 +1,3 @@
-/*
-  Специально для светлой темы при наличии класса.
-  Здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
-
 .page.theme_light {
   --font-family: IBM Plex Mono;
   --image: url(../images/cover-image-light.png);
@@ -26,8 +20,7 @@
 }
 
 @media (prefers-color-scheme: light) {
-  :root {
-        /* Дублируем переменные светлой темы */    
+  :root { 
         --font-family: IBM Plex Mono,  monospace;
         --image: url(../images/cover-image-light.png);
         --font-size: 18px;
